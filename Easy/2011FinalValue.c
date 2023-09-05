@@ -11,9 +11,22 @@ Given an array of strings operations containing a list of operations, return the
 
 
 */
-
+int finalValue(int*, int);
 int main(){
     
 
     return 0;
+}
+int finalValue(int* arr, int arrL){
+    int x =0;
+    char incr1[] = "x++";
+    char incr2[] = "++x";
+    for(int i = 0; i < arrL; i++){
+        if( strcmp(arr[i], incr1) == 0 || strcmp(arr[i], incr2) == 0 ){
+            x++;
+        }else{
+            x--;
+        }
+    }
+    return x;
 }
