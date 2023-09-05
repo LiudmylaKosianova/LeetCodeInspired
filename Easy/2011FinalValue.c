@@ -11,13 +11,15 @@ Given an array of strings operations containing a list of operations, return the
 
 
 */
-int finalValue(int*, int);
+int finalValue(char**, int);
 int main(){
+    char* case1[3] = {"x++", "x--", "x--"};
+    int x = finalValue(case1,3);
+    printf("%d", x);
     
-
     return 0;
 }
-int finalValue(int* arr, int arrL){
+int finalValue(char** arr, int arrL){
     int x =0;
     char incr1[] = "x++";
     char incr2[] = "++x";
