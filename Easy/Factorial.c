@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+int factorial(int);
+
 int main() {
     /* testing code */
     printf("0! = %i\n", factorial(0));
@@ -9,3 +11,10 @@ int main() {
 }
 
 /* define your function here (don't forget to declare it) */
+int factorial (int rose){
+    if(rose == 0 ){
+        return 1;
+    }else {
+        return rose * factorial(rose-1);
+    }
+}
