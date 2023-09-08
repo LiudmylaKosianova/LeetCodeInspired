@@ -17,12 +17,22 @@ int main(){
 }
 
 struct ListNode * removeElements(struct ListNode * head, int val){
-    struct ListNode * tempNode = NULL;
-    int removeInt = val;
-    while(head != NULL){
-        if(head->val == removeInt){
-            
+      
+     struct ListNode * newHead = NULL;
+     struct ListNode * tempNode = NULL;
+     newHead = head;
+     int removeVal = val;
+     
+     //check if the list is empty
+     if(head == NULL){
+        return newHead;
+     }
+     //check if the first element is val value
+     if(newHead->val == removeVal){
+        while(newHead->val == removeVal){
+             
         }
-    }
+     }
+     return newHead;
 
 }
