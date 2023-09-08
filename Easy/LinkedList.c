@@ -33,7 +33,29 @@ int pop(node_t ** head) {
 
 int remove_by_value(node_t ** head, int val) {
     /* TODO: fill in your code here */
+    node_t * temp_node = NULL;
+    node_t * toRemove = NULL;
+    int intToRemove = val;
     
+    //if the first element contains the value 'val', then remove the first element
+    if((*head)->val == intToRemove){
+        temp_node = (*head)->next;
+        free(*head);
+        *head = temp_node;
+        return 0;
+    }
+
+    //iterate over the linkedlist in search of the value 'val'
+    temp_node = *head;
+    while(temp_node->next->val != intToRemove){
+        temp_node = temp_node->next;
+    }
+
+    toRemove = temp_node->next;
+    temp_node->next = temp_node->next->next;
+    free(toRemove);
+    return 0;        
+
 }
 
 int main() {
